@@ -37,37 +37,8 @@ const StateSchema = new Schema({
   stateImage: String,
 });
 
-const MainDocumentSchema = new Schema({
-  ap: StateSchema,
-  tn: StateSchema,
-  ts: StateSchema,
-  kerala: StateSchema,
-  karnataka: StateSchema,
-  madhyapradesh: StateSchema,
-  maharashtra: StateSchema,
-  arunachal_pradesh: StateSchema,
-  assam: StateSchema,
-  bihar: StateSchema,
-  chattisgarh: StateSchema,
-  Goa : StateSchema,
-  Gujarat: StateSchema,
-  Haryana: StateSchema,
-  Himachal: StateSchema,
-  jammu: StateSchema,
-  Jharkhand: StateSchema,
-  Manipur: StateSchema,
-  Meghalaya: StateSchema,
-  Nagaland: StateSchema,
-  Odisha: StateSchema,
-  Punjab: StateSchema,
-  Rajasthan: StateSchema,
-  Sikkim: StateSchema,
-  Tripura: StateSchema,
-  Uttarakhand: StateSchema,
-  UttarPradesh: StateSchema,
-  wb: StateSchema,
-  
-});
+const MainDocumentSchema = new Schema({}, { strict: false });
+
 
 export default mongoose.models.MainDocument ||
   mongoose.model("MainDocument", MainDocumentSchema, "states_data");

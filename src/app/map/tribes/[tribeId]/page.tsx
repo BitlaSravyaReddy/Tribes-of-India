@@ -11,6 +11,7 @@ import MainDocument from '@/models/MainDocument';
 export const dynamicParams = true;
 
 
+
 interface TribePageProps {
   params: {
     tribeId: string;
@@ -34,27 +35,30 @@ interface Tribe {
 }
 
 async function fetchAllTribes(): Promise<Tribe[]> {
-<<<<<<< HEAD
-  const res = await fetch('/api/data', { cache: 'no-store' });
-=======
-  
-  await dbConnect(); // Direct MongoDB connection
->>>>>>> 1cd0416fe79355b3b707f719c5209bcd952a5792
+  await dbConnect();
 
   const mainDocument = await MainDocument.findOne();
   if (!mainDocument) {
     throw new Error('No data found');
   }
 
-  const { ap, ts, tn } = mainDocument.toObject();
-  return [...ap.tribes, ...ts.tribes, ...tn.tribes];
+  const data = mainDocument.toObject();
+  const tribes: Tribe[] = [];
+
+  for (const stateKey of Object.keys(data)) {
+    if (stateKey === '_id') continue;
+
+    const state = data[stateKey];
+    if (state?.tribes?.length) {
+      tribes.push(...state.tribes);
+    }
+  }
+
+  return tribes;
 }
 
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> 1cd0416fe79355b3b707f719c5209bcd952a5792
+  
 async function getTribe(id: string): Promise<Tribe | undefined> {
   const allTribes = await fetchAllTribes();
   return allTribes.find((tribe) => tribe.id === id);

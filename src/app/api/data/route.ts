@@ -10,5 +10,6 @@ export async function GET() {
     return NextResponse.json({ message: 'No data found' }, { status: 404 });
   }
   const { _id, ...stateData } = mainDocument.toObject();
-  return NextResponse.json(stateData);
+  return NextResponse.json(mainDocument);
+  
 }
