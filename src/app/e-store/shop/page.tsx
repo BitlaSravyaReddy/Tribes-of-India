@@ -1,7 +1,7 @@
 "use client";
 import { useSearchParams } from "next/navigation";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Header } from "@/components/e-store/header";
 import { Footer } from "@/components/e-store/footer";
 import { ProductCard } from "@/components/e-store/product-card";
@@ -30,8 +30,12 @@ const allMaterials = Array.from(new Set(products.map(p => p.material)));
 export default function ShopPage() {
     const [priceRange, setPriceRange] = useState([0, 10000]);
     const searchParams = useSearchParams();
-    const selectedCategory = searchParams.get("category");
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
+  useEffect(() => {
+    const category = searchParams.get("category");
+    setSelectedCategory(category);
+  }, [searchParams]);
 
   return (
     <div className="flex flex-col min-h-screen">
