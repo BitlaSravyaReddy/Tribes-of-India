@@ -22,7 +22,7 @@ export default function HomePage() {
         
 
         // const res = await axios.get('http://localhost:5000/api/data');
-        const res = await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL || ''}/api/data`);
+        const res = await axios.get('/api/data');
 
         console.log('stateCode from params:', stateCode);
         console.log('Available keys from API:', Object.keys(res.data as object));

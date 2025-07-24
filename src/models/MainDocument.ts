@@ -1,5 +1,6 @@
 // src/models/MainDocument.ts
 import mongoose, { Schema } from "mongoose";
+import { Jomolhari } from "next/font/google";
 
 const FestivalSchema = new Schema({
   name: String,
@@ -15,7 +16,7 @@ const TribeSchema = new Schema({
   history: String,
   origin: String,
   distribution: String,
-  festivals: [FestivalSchema],
+  festivals: { type: [FestivalSchema], default: undefined },
   livelihood: String,
   challenges: [String],
   beliefs: String,
@@ -40,6 +41,32 @@ const MainDocumentSchema = new Schema({
   ap: StateSchema,
   tn: StateSchema,
   ts: StateSchema,
+  kerala: StateSchema,
+  karnataka: StateSchema,
+  madhyapradesh: StateSchema,
+  maharashtra: StateSchema,
+  arunachal_pradesh: StateSchema,
+  assam: StateSchema,
+  bihar: StateSchema,
+  chattisgarh: StateSchema,
+  Goa : StateSchema,
+  Gujarat: StateSchema,
+  Haryana: StateSchema,
+  Himachal: StateSchema,
+  jammu: StateSchema,
+  Jharkhand: StateSchema,
+  Manipur: StateSchema,
+  Meghalaya: StateSchema,
+  Nagaland: StateSchema,
+  Odisha: StateSchema,
+  Punjab: StateSchema,
+  Rajasthan: StateSchema,
+  Sikkim: StateSchema,
+  Tripura: StateSchema,
+  Uttarakhand: StateSchema,
+  UttarPradesh: StateSchema,
+  wb: StateSchema,
+  
 });
 
 export default mongoose.models.MainDocument ||

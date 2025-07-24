@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { translateText } from "@/lib/translate"; // adjust path if needed
+import { translateText } from "@/lib/blogs/translate"; // adjust path if needed
 
 // Mock blog data (you can later replace with real DB)
 const mockBlogs = [

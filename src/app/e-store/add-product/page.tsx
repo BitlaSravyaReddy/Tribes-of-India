@@ -86,7 +86,7 @@ const [sellerId, setSellerId] = useState('');
     //   method: 'POST',
     //   body: formData
     // });
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || ''}/api/add-product`, {
+    const response = await fetch('/api/add-product', {
   method: 'POST',
   body: formData,
 });
