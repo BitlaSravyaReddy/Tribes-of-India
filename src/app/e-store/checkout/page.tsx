@@ -1,5 +1,5 @@
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
+import { Header } from "../../../components/e-store/header";
+import { Footer } from "@/components/e-store/footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -14,7 +14,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import Image from "next/image";
-import { products } from "@/lib/data";
+import { products } from "@/lib/e-store/data";
 
 export default function CheckoutPage() {
     const cartItems = products.slice(0, 2);
