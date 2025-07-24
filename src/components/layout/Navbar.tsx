@@ -25,17 +25,15 @@ const Navbar = () => {
   //   setHasMounted(true);
   // }, []);
 
-  const navItems = hasMounted
-  ? [
-      { name: t('navigation.home'), href: '/' },
-      { name: t('navigation.map'), href: '/map' },
-      { name: t('navigation.chatbot'), href: '/chatbot' },
-      { name: t('navigation.estore'), href: '/e-store' },
-      { name: t('navigation.news'), href: '/news' },
-      { name: t('navigation.analytics'), href: '/analytics' },
-      { name: t('navigation.blogs'), href: '/blogs' },
-    ]
-  : [];
+  const navItems = [
+  { name: hasMounted ? t('navigation.home') : 'Home', href: '/' },
+  { name: hasMounted ? t('navigation.map') : 'Map', href: '/map' },
+  { name: hasMounted ? t('navigation.chatbot') : 'Chatbot', href: '/chatbot' },
+  { name: hasMounted ? t('navigation.estore') : 'E-Store', href: '/e-store' },
+  { name: hasMounted ? t('navigation.news') : 'News', href: '/news' },
+  { name: hasMounted ? t('navigation.analytics') : 'Analytics', href: '/analytics' },
+  { name: hasMounted ? t('navigation.blogs') : 'Blogs', href: '/blogs' },
+];
 
   const isActive = (href: string) => pathname === href;
 
