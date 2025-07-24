@@ -104,8 +104,8 @@ async function fetchAllTribes(): Promise<Tribe[]> {
   // const res = await fetch('http://localhost:5000/api/data', {
   //   cache: 'no-store', // disable caching so you get fresh data
   // });
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || ''}/api/data`, {
-  cache: 'no-store',
+    const res = await fetch('/api/data', { cache: 'no-store' });
+
 });
 
   if (!res.ok) {
