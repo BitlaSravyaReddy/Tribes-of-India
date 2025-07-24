@@ -1,0 +1,22 @@
+{
+  "Santhali": {
+    "tribal_stories": "ᱢᱟᱲᱟᱝ ᱥᱟᱞᱟᱜ",
+    "write_story": "ᱢᱟᱲᱟᱝ ᱟᱹᱪᱤ",
+    "submit_blog": "ᱵᱽᱞᱚᱜ ᱥᱟᱵᱟᱨ"
+  },
+  "Bhili": {
+    "tribal_stories": "आदिवासी कहानियाँ",
+    "write_story": "कहानी लिखो",
+    "submit_blog": "ब्लॉग भेजो"
+  },
+  "Gondi": {
+    "tribal_stories": "कोया कथा",
+    "write_story": "कोया लेखन",
+    "submit_blog": "ब्लॉग भेजें"
+  },
+  "Kurmali": {
+    "tribal_stories": "जनजातीय कथा",
+    "write_story": "कथा लिख",
+    "submit_blog": "ब्लॉग सबमिट"
+  }
+}

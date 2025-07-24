@@ -1,0 +1,54 @@
+{
+  "navigation": {
+    "home": "ᱦᱚᱨᱚ",
+    "map": "ᱢᱟᱯ",
+    "chatbot": "ᱪᱟᱴᱵᱚᱴ",
+    "estore": "ᱤ-ᱥᱴᱚᱨ",
+    "news": "ᱥᱮᱨᱮᱝ",
+    "analytics": "ᱟᱹᱱᱠᱟᱹ ᱵᱟᱦᱟ",
+    "title": "ᱤᱱᱰᱤᱭᱟ ᱨᱮ ᱦᱚᱨᱦ ᱡᱟᱛᱤ",
+    "subtitle": "ᱥᱟᱱᱥᱠᱨᱩᱛᱤᱠ ᱰᱟᱦᱮᱱ",
+    "blogs": "ᱵᱟᱞᱟᱜ"
+  },
+  
+   "e-storeNavbar": {
+  "shop_all": "ᱵᱟᱨᱛᱟ ᱥᱚᱯ",
+  "categories": "ᱥᱟᱶᱛᱟᱣ",
+  "login": "ᱞᱚᱜᱤᱱ",
+  "sign_up": "ᱥᱟᱭᱱ ᱚᱯ"
+},
+"product_card": {
+    "add_to_cart": "ᱠᱟᱹᱨᱛ ᱨᱮ ᱰᱚ ᱰᱟᱞᱚᱦᱟ",
+    "add_to_wishlist": "ᱣᱤᱥᱞᱤᱥᱴ ᱨᱮ ᱰᱚ ᱰᱟᱞᱚᱦᱟ"
+  
+
+},
+
+"slider": {
+    "art_of_tradition": {
+      "title": "ᱨᱮᱣᱟᱠᱽ ᱥᱮᱨᱮᱝ ᱵᱟᱦᱟ",
+      "subtitle": "ᱦᱚᱨᱦᱽ ᱵᱷᱟᱱᱰᱟᱨ ᱠᱚ ᱥᱟᱠᱟᱢ ᱨᱮ ᱰᱟᱠᱦ ᱰᱚ"
+    },
+    "woven_stories": {
+      "title": "ᱡᱩᱞ ᱥᱮᱱᱛᱮ ᱦᱟᱹᱞ ᱠᱟᱹᱲᱤ ᱵᱟᱦᱟᱣ",
+      "subtitle": "ᱦᱚᱨᱦ ᱞᱮᱠᱟᱛ ᱠᱚ ᱵᱤᱱᱟᱝ ᱵᱷᱮᱵᱷᱟᱣ ᱟᱨ ᱰᱟᱠᱦ ᱰᱚ"
+    },
+    "jewelry_tale": {
+      "title": "ᱡᱮᱣᱞᱚᱨᱤ ᱠᱚ ᱡᱩᱞ ᱠᱷᱚᱨᱚᱞ",
+      "subtitle": "ᱡᱚᱲᱟᱹ ᱵᱟᱹᱱᱛᱤ ᱦᱚᱨᱦ ᱡᱟᱛᱤ ᱞᱤᱥᱴ ᱨᱮ"
+    }
+  },
+  "blogs":{
+    "write_story": "ᱵᱟᱹᱞᱤ ᱵᱚᱞ",
+  "blog_title": "ᱵᱽᱞᱚᱜ ᱥᱟᱞᱛᱮ",
+  "blog_content": "ᱵᱽᱞᱚᱜ ᱛᱚᱲᱚ",
+  "author_name": "ᱚᱛᱚᱨ ᱧᱮᱞ",
+  "submit_blog": "ᱵᱽᱞᱚᱜ ᱛᱚᱲᱚ",
+  "submitted": "ᱵᱽᱞᱚᱜ ᱛᱚᱲᱚ ᱵᱮᱵᱷᱟ",
+  "select_language": "ᱞᱟᱹᱜᱩᱞ ᱵᱚᱞ",
+  "tribal_stories": "ᱴᱟᱹᱨᱵᱤ ᱵᱟᱹᱞ"
+  }
+
+}
+
+

@@ -1,0 +1,22 @@
+{
+  "navigation": {
+    "home": "घर",
+    "map": "नक्शा",
+    "chatbot": "बोलई वाला यंत्र",
+    "estore": "ई-दुकान",
+    "news": "बातमी",
+    "analytics": "विश्लेषण",
+    "title": "हिंडोना कोयातुर",
+    "blogs": "ब्लॉग"
+  },
+  "blogs": {
+  "write_story": "कथा लिख",
+  "blog_title": "ब्लॉग शीर्षक",
+  "blog_content": "अपनी कथा लिखो...",
+  "author_name": "लेखक",
+  "submit_blog": "ब्लॉग सबमिट कर",
+  "submitted": "ब्लॉग सबमिट हो गेला!",
+  "select_language": "भाषा चुन",
+  "tribal_stories": "गोंडी कथा"
+}
+}

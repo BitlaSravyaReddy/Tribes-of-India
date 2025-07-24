@@ -1,0 +1,28 @@
+
+[
+  {
+    "id": "english",
+    "name": "English",
+    "code": "en"
+  },
+  {
+    "id": "santhali",
+    "name": "Santhali",
+    "code": "sat"
+  },
+  {
+    "id": "bhili",
+    "name": "Bhili",
+    "code": "bhb"
+  },
+  {
+    "id": "gondi",
+    "name": "Gondi",
+    "code": "gon"
+  },
+  {
+    "id": "kurmali",
+    "name": "Kurmali",
+    "code": "kjd"
+  }
+]

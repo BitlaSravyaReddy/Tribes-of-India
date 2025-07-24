@@ -1,0 +1,22 @@
+{
+  "navigation": {
+    "home": "मुख्य पृष्ठ",
+    "map": "नक्शा देखवो",
+    "chatbot": "बात करनारी मशीन",
+    "estore": "ऑनलाइन दुकान",
+    "news": "समाचार",
+    "analytics": "आँकड़ो विश्लेषण",
+    "title": "भारत के जनजातियाँ",
+    "blogs": "ब्लॉग"
+  },
+  "blogs":{
+    "write_story": "कहानी लिखो",
+  "blog_title": "ब्लॉग शीर्षक",
+  "blog_content": "अपनी कहानी लिखो...",
+  "author_name": "लेखक का नाम",
+  "submit_blog": "ब्लॉग सबमिट करो",
+  "submitted": "ब्लॉग सबमिट हो गया!",
+  "select_language": "भाषा चुनें",
+  "tribal_stories": "आदिवासी कहानियाँ"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "navigation": {
+    "home": "Home",
+    "map": "Interactive Map",
+    "chatbot": "Chatbot",
+    "estore": "E-Store",
+    "news": "News",
+    "analytics": "Analytics",
+    "title": "Tribes of India",
+    "subtitle": "Cultural Heritage",
+    "blogs": "Blogs"
+  },
+  "e-storeNavbar": {
+    
+    "shop_all": "Shop All",
+    "categories": "Categories",
+    
+  
+  "login": "Login",
+  "sign_up": "Sign Up",
+  
+  "category": {
+    "Clothing": "Clothing",
+    "Handicrafts": "Handicrafts",
+    "Jewelry": "Jewelry",
+    "Art": "Art"
+  }
+
+  },
+  "product_card": {
+    "add_to_cart": "Add to Cart",
+    "add_to_wishlist": "Add to Wishlist"
+  },
+  "slider": {
+    "art_of_tradition": {
+      "title": "Art of Tradition",
+      "subtitle": "Explore the rich cultural heritage of Indian tribes"
+    },
+    "woven_stories": {
+      "title": "Woven Stories",
+      "subtitle": "Discover the intricate tales behind tribal crafts"
+    },
+    "jewelry_tale": {
+      "title": "Jewelry Tale",
+      "subtitle": "Unveiling the stories behind tribal jewelry"
+    }
+  },
+  "product": {
+    "bamboo_basket": "Bamboo Weave Basket",
+    "terracotta_figurine": "Terracotta Warrior Figurine"
+  },
+  "category": {
+    "handicrafts": "Handicrafts",
+    "clothing": "Clothing",
+    "jewelry": "Jewelry",
+    "home_decor": "Home Decor",
+    "herbal_products": "Herbal Products"
+  },
+  "material": {
+    "bamboo": "Bamboo",
+    "terracotta": "Terracotta",
+    "cotton": "Cotton",
+    "brass": "Brass",
+    "cane": "Cane"
+  },
+  "tag": {
+    "eco_friendly": "Eco-friendly",
+    "hand_made": "Hand-made",
+    "organic": "Organic"
+  },
+  "blogs":{
+    "write_story": "Write a Tribal Story",
+  "blog_title": "Blog Title",
+  "blog_content": "Write your blog...",
+  "author_name": "Author Name",
+  "submit_blog": "Submit Blog",
+  "submitted": "Blog submitted!",
+  "select_language": "Select Language",
+  "tribal_stories": "Tribal Stories"
+  }
+
+
+ 
+}

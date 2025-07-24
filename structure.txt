@@ -1,0 +1,132 @@
+# Tribes of India - Next.js Project Structure
+
+```
+tribes-of-india/
+├── public/
+│   ├── images/
+│   │   ├── tribes/
+│   │   ├── slider/
+│   │   ├── famous-people/
+│   │   └── logo.png
+│   ├── icons/
+│   └── favicon.ico
+├── src/
+│   ├── app/
+│   │   ├── globals.css
+│   │   ├── layout.tsx -8
+│   │   ├── page.tsx (Homepage) -7
+│   │   ├── chatbot/
+│   │   │   └── page.tsx
+│   │   ├── e-store/
+│   │   │   ├── page.tsx
+│   │   │   └── [productId]/
+│   │   │       └── page.tsx
+│   │   ├── news/
+│   │   │   ├── page.tsx
+│   │   │   └── [slug]/
+│   │   │       └── page.tsx
+│   │   ├── analytics/
+│   │   │   └── page.tsx
+│   │   ├── map/
+│   │   │   └── page.tsx
+│   │   └── api/
+│   │       ├── tribes/
+│   │       │   └── route.ts
+│   │       ├── news/
+│   │       │   └── route.ts
+│   │       └── analytics/
+│   │           └── route.ts
+│   ├── components/
+│   │   ├── layout/
+│   │   │   ├── Navbar.tsx -5
+│   │   │   └── Footer.tsx -6
+│   │   ├── home/
+│   │   │   ├── ImageSlider.tsx   -1
+│   │   │   ├── FamousTribalPeople.tsx -2
+│   │   │   ├── WhyUseApp.tsx -3
+│   │   │   └── PersonCard.tsx -4
+│   │   ├── map/
+│   │   │   ├── IndiaMap.tsx
+│   │   │   └── StateInfo.tsx
+│   │   ├── chatbot/
+│   │   │   ├── ChatInterface.tsx
+│   │   │   └── MessageBubble.tsx
+│   │   ├── e-store/
+│   │   │   ├── ProductCard.tsx
+│   │   │   ├── ProductGrid.tsx
+│   │   │   └── ShoppingCart.tsx
+│   │   ├── news/
+│   │   │   ├── NewsCard.tsx
+│   │   │   └── NewsGrid.tsx
+│   │   ├── analytics/
+│   │   │   ├── TribalChart.tsx
+│   │   │   └── DataVisualization.tsx
+│   │   └── ui/
+│   │       ├── Button.tsx
+│   │       ├── Card.tsx
+│   │       ├── Modal.tsx
+│   │       └── LoadingSpinner.tsx
+│   ├── lib/
+│   │   ├── data/
+│   │   │   ├── tribes.ts
+│   │   │   ├── states.ts
+│   │   │   └── famous-people.ts
+│   │   ├── utils/
+│   │   │   ├── cn.ts (className utility)
+│   │   │   └── formatters.ts
+│   │   └── constants/
+│   │       └── index.ts
+│   ├── types/
+│   │   ├── tribes.ts
+│   │   ├── news.ts
+│   │   ├── products.ts
+│   │   └── analytics.ts
+│   └── hooks/
+│       ├── useLocalStorage.ts
+│       └── useDebounce.ts
+├── tailwind.config.js
+├── next.config.js
+├── tsconfig.json
+├── package.json
+└── README.md
+```
+
+## Key Files Explanation:
+
+### Core Layout Files:
+- `src/app/layout.tsx` - Root layout with Navbar and Footer
+- `src/app/page.tsx` - Homepage component
+- `src/components/layout/Navbar.tsx` - Fixed navigation bar
+- `src/components/layout/Footer.tsx` - Footer with details
+
+### Homepage Components:
+- `ImageSlider.tsx` - Hero slider with hover descriptions
+- `FamousTribalPeople.tsx` - Card grid of famous tribal people
+- `WhyUseApp.tsx` - Benefits/features section
+- `PersonCard.tsx` - Reusable card for tribal people
+
+### Feature Pages:
+- `chatbot/page.tsx` - AI chatbot interface
+- `e-store/page.tsx` - E-commerce store
+- `news/page.tsx` - News section
+- `analytics/page.tsx` - Data analytics dashboard
+- `map/page.tsx` - Interactive India map
+
+### Data & Types:
+- `types/` - TypeScript interfaces for all data models
+- `lib/data/` - Static data and API functions
+- `lib/utils/` - Utility functions
+
+### Styling:
+- `globals.css` - Global styles and Tailwind imports
+- `tailwind.config.js` - Tailwind configuration
+
+## Next Steps:
+1. Set up the basic Next.js project structure
+2. Install required dependencies (Tailwind, TypeScript, etc.)
+3. Create the root layout with fixed navbar
+4. Build homepage components step by step
+5. Implement the interactive map functionality
+6. Add data fetching and state management
+
+Would you like me to start by creating the homepage components or would you prefer to begin with the project setup and configuration?
