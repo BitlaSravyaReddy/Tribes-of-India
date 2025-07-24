@@ -32,7 +32,7 @@ interface Tribe {
 }
 
 async function fetchAllTribes(): Promise<Tribe[]> {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
 
 if (!baseUrl) {
   throw new Error('Missing NEXT_PUBLIC_BASE_URL');
