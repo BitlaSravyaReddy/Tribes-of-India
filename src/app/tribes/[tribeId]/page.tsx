@@ -1,79 +1,11 @@
-// import { stateData, type Tribe } from '@/lib/data';
-// import { TribeDetailContent } from '@/components/tribe-detail-content';
-// import { notFound } from 'next/navigation';
-// import type { Metadata, ResolvingMetadata } from 'next';
-// import Link from 'next/link';
-// import { Button } from '@/components/ui/button';
-// import { ArrowLeft } from 'lucide-react';
 
-
-// interface TribePageProps {
-//   params: {
-//     tribeId: string;
-//   };
-
-// }
-
-// // Function to get tribe data. In a real app, this might fetch from an API.
-// async function getTribe(id: string): Promise<Tribe | undefined> {
-//   return stateData.tribes.find((tribe) => tribe.id === id);
-// }
-
-
-
-// export async function generateStaticParams() {
-//   return stateData.tribes.map((tribe) => ({
-//     tribeId: tribe.id,
-//   }));
-// }
-
-
-// export async function generateMetadata(
-//   { params }: TribePageProps,
-//   parent: ResolvingMetadata
-// ): Promise<Metadata> {
-//   const tribe = await getTribe(params.tribeId);
-
-//   if (!tribe) {
-//     return {
-//       title: 'Tribe Not Found | Tribal Echoes',
-//     };
-//   }
-
-//   return {
-//     title: `${tribe.name} | Tribal Echoes`,
-//     description: `Learn about the ${tribe.name}: ${tribe.title}. Discover their history, culture, and traditions.`,
-//   };
-// }
-
-
-// export default async function TribePage({ params }: TribePageProps) {
-//   const tribe = await getTribe(params.tribeId);
-
-//   if (!tribe) {
-//     notFound();
-//   }
-
-//   return (
-//     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
-//       <div className="mb-8">
-//         <Button asChild variant="outline">
-//           <Link href="/" className="inline-flex items-center text-primary hover:text-accent">
-//             <ArrowLeft className="mr-2 h-4 w-4" />
-//             Back to All Tribes
-//           </Link>
-//         </Button>
-//       </div>
-//       <TribeDetailContent tribe={tribe} />
-//     </div>
-//   );
-// }
 import { TribeDetailContent } from '@/components/map/tribe-detail-content';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import type { Metadata } from 'next';
+import { dbConnect } from '@/lib/dbConnect';
 
 export const dynamicParams = true;
 
@@ -101,23 +33,14 @@ interface Tribe {
 }
 
 async function fetchAllTribes(): Promise<Tribe[]> {
-  // const res = await fetch('http://localhost:5000/api/data', {
-  //   cache: 'no-store', // disable caching so you get fresh data
-  // });
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || ''}/api/data`, {
-    cache: 'no-store', // disable caching so you get fresh data
-  });
-
-  if (!res.ok) {
-    throw new Error('Failed to fetch tribe data from API');
-  }
-
-  const data = await res.json();
+  const client = await dbConnect();
+  const db = client.db(); // your DB name if needed: client.db("tribalDB")
+  const doc = await db.collection("states_data").findOne({});
 
   return [
-    ...data.ap.tribes,
-    ...data.ts.tribes,
-    ...data.tn.tribes,
+    ...doc.ap.tribes,
+    ...doc.tn.tribes,
+    ...doc.ts.tribes,
   ];
 }
 
