@@ -32,7 +32,14 @@ interface Tribe {
 }
 
 async function fetchAllTribes(): Promise<Tribe[]> {
-  const res = await fetch('/api/data', { cache: 'no-store' });
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
+if (!baseUrl) {
+  throw new Error('Missing NEXT_PUBLIC_BASE_URL');
+}
+
+const res = await fetch(`${baseUrl}/api/data`, { cache: 'no-store' });
+
 
   if (!res.ok) {
     throw new Error('Failed to fetch tribe data from API');
