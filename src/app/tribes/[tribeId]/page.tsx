@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import type { Metadata } from 'next';
 import { dbConnect } from '@/lib/dbConnect';
+import MainDocument from '@/models/MainDocument';
 
 export const dynamicParams = true;
 
@@ -33,15 +34,26 @@ interface Tribe {
 }
 
 async function fetchAllTribes(): Promise<Tribe[]> {
-  const client = await dbConnect();
-  const db = client.db(); // your DB name if needed: client.db("tribalDB")
-  const doc = await db.collection("states_data").findOne({});
+  await dbConnect();
 
-  return [
-    ...doc.ap.tribes,
-    ...doc.tn.tribes,
-    ...doc.ts.tribes,
-  ];
+  const mainDocument = await MainDocument.findOne();
+  if (!mainDocument) {
+    throw new Error('No data found');
+  }
+
+  const data = mainDocument.toObject();
+  const tribes: Tribe[] = [];
+
+  for (const stateKey of Object.keys(data)) {
+    if (stateKey === '_id') continue;
+
+    const state = data[stateKey];
+    if (state?.tribes?.length) {
+      tribes.push(...state.tribes);
+    }
+  }
+
+  return tribes;
 }
 
 async function getTribe(id: string): Promise<Tribe | undefined> {
@@ -51,9 +63,11 @@ async function getTribe(id: string): Promise<Tribe | undefined> {
 
 export async function generateStaticParams() {
   const tribes = await fetchAllTribes();
-  return tribes.map((tribe) => ({
-    tribeId: tribe.id,
-  }));
+  return tribes
+    .filter((tribe) => typeof tribe.id === 'string' && tribe.id.trim() !== '')
+    .map((tribe) => ({
+      tribeId: tribe.id,
+    }));
 }
 
 export async function generateMetadata({ params }: TribePageProps): Promise<Metadata> {
