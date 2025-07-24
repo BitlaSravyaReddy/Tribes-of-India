@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import type { Metadata } from 'next';
+import { dbConnect } from '@/lib/dbConnect';
+import MainDocument from '@/models/MainDocument';
 
 export const dynamicParams = true;
 
@@ -32,22 +34,27 @@ interface Tribe {
 }
 
 async function fetchAllTribes(): Promise<Tribe[]> {
+<<<<<<< HEAD
   const res = await fetch('/api/data', { cache: 'no-store' });
+=======
+  
+  await dbConnect(); // Direct MongoDB connection
+>>>>>>> 1cd0416fe79355b3b707f719c5209bcd952a5792
 
-  if (!res.ok) {
-    throw new Error('Failed to fetch tribe data from API');
+  const mainDocument = await MainDocument.findOne();
+  if (!mainDocument) {
+    throw new Error('No data found');
   }
 
-  const data = await res.json();
-
-  return [
-    ...data.ap.tribes,
-    ...data.ts.tribes,
-    ...data.tn.tribes,
-  ];
+  const { ap, ts, tn } = mainDocument.toObject();
+  return [...ap.tribes, ...ts.tribes, ...tn.tribes];
 }
 
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 1cd0416fe79355b3b707f719c5209bcd952a5792
 async function getTribe(id: string): Promise<Tribe | undefined> {
   const allTribes = await fetchAllTribes();
   return allTribes.find((tribe) => tribe.id === id);
