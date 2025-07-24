@@ -66,9 +66,11 @@ async function getTribe(id: string): Promise<Tribe | undefined> {
 
 export async function generateStaticParams() {
   const tribes = await fetchAllTribes();
-  return tribes.map((tribe) => ({
-    tribeId: tribe.id,
-  }));
+  return tribes
+    .filter((tribe) => typeof tribe.id === 'string' && tribe.id.trim() !== '')
+    .map((tribe) => ({
+      tribeId: tribe.id,
+    }));
 }
 
 export async function generateMetadata({ params }: TribePageProps): Promise<Metadata> {
