@@ -1,4 +1,6 @@
 "use client";
+export const dynamic = "force-dynamic";
+
 import { useSearchParams } from "next/navigation";
 
 import { useState, useEffect } from 'react';
@@ -23,9 +25,10 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
 import { products, categories } from "@/lib/e-store/data";
 
-const allTribes = Array.from(new Set(products.map(p => p.tribe)));
-const allRegions = Array.from(new Set(products.map(p => p.region)));
-const allMaterials = Array.from(new Set(products.map(p => p.material)));
+const allTribes = Array.from(new Set(products?.map(p => p.tribe) ?? []));
+
+const allRegions = Array.from(new Set(products?.map(p => p.region) ?? []));
+const allMaterials = Array.from(new Set(products?.map(p => p.material) ?? []));
 
 export default function ShopPage() {
     const [priceRange, setPriceRange] = useState([0, 10000]);
