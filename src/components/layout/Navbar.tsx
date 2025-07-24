@@ -101,7 +101,7 @@ const Navbar = () => {
 
 
           {/* Mobile menu button */}
-          {/* <div className="md:hidden">
+          <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-orange-600 hover:bg-orange-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500"
@@ -118,11 +118,11 @@ const Navbar = () => {
                 </svg>
               )}
             </button>
-          </div> */}
+          </div> 
         </div>
 
         {/* Mobile Navigation */}
-        {/* {isMenuOpen && (
+         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
               {navItems.map((item) => (
@@ -141,7 +141,7 @@ const Navbar = () => {
               ))}
             </div>
           </div>
-        )} */}
+        )} 
       </div>
     </nav>
   );
