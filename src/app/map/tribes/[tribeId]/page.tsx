@@ -1,4 +1,8 @@
 
+export const dynamic = "force-dynamic";
+
+export const dynamicParams = true;
+
 import { TribeDetailContent } from '../../../../components/map/tribe-detail-content';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
@@ -8,7 +12,6 @@ import type { Metadata } from 'next';
 import { dbConnect } from '@/lib/dbConnect';
 import MainDocument from '@/models/MainDocument';
 
-export const dynamicParams = true;
 
 
 

@@ -71,9 +71,10 @@ export function TribeDetailContent({ tribe }: TribeDetailContentProps) {
       </Card>
 
       <Accordion type="multiple" defaultValue={['History', 'Festivals']} className="w-full space-y-4">
-        {sections.map((section) => (
-          <AccordionItem key={section.title} value={section.title} className="border-b-0">
-             <Card className="overflow-hidden shadow-lg">
+        {sections && sections.length > 0 ? (
+          sections?.map?.((section) => (
+            <AccordionItem key={section.title} value={section.title} className="border-b-0">
+              <Card className="overflow-hidden shadow-lg">
                 <AccordionTrigger className="px-6 py-4 text-lg font-semibold hover:no-underline text-primary hover:bg-muted/50 rounded-t-lg">
                   <div className="flex items-center">
                     <section.icon className="w-6 h-6 mr-3 text-accent" />
@@ -83,9 +84,12 @@ export function TribeDetailContent({ tribe }: TribeDetailContentProps) {
                 <AccordionContent className="px-6 pb-6 pt-0">
                   <p className="text-foreground/90 leading-relaxed">{section.content}</p>
                 </AccordionContent>
-             </Card>
-          </AccordionItem>
-        ))}
+              </Card>
+            </AccordionItem>
+          ))
+        ) : (
+          <p className="text-muted">No details available.</p>
+        )}
 
         <AccordionItem value="Festivals" className="border-b-0">
           <Card className="overflow-hidden shadow-lg">
@@ -96,7 +100,7 @@ export function TribeDetailContent({ tribe }: TribeDetailContentProps) {
               </div>
             </AccordionTrigger>
             <AccordionContent className="px-6 pb-6 pt-0 space-y-4">
-              {tribe.festivals.map((festival, index) => (
+              {tribe.festivals?.map?.((festival, index) => (
                 <div key={index} className="p-4 border rounded-md bg-background shadow-sm">
                   <h4 className="font-semibold text-primary">{festival.name}</h4>
                   <p className="text-sm text-muted-foreground">{festival.description}</p>
@@ -116,7 +120,7 @@ export function TribeDetailContent({ tribe }: TribeDetailContentProps) {
             </AccordionTrigger>
             <AccordionContent className="px-6 pb-6 pt-0">
               <ul className="list-disc list-inside space-y-1 text-foreground/90">
-                {tribe.practices.map((practice, index) => (
+                {tribe.practices?.map?.((practice, index) => (
                   <li key={index}>{practice}</li>
                 ))}
               </ul>
@@ -134,7 +138,7 @@ export function TribeDetailContent({ tribe }: TribeDetailContentProps) {
             </AccordionTrigger>
             <AccordionContent className="px-6 pb-6 pt-0">
               <div className="flex flex-wrap gap-2">
-              {tribe.challenges.map((challenge, index) => (
+              {tribe.challenges?.map?.((challenge, index) => (
                 <Badge key={index} variant="outline" className="text-sm border-destructive/50 text-destructive">
                   {challenge}
                 </Badge>
